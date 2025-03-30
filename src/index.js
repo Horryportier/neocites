@@ -15,7 +15,7 @@ function generate_watch_list(data) {
     for (const item of items) {
         div.append(generate_watch_item(item));
     }
-    return outter_div;
+    app === null || app === void 0 ? void 0 : app.append(outter_div);
 }
 function generate_watch_item(item) {
     const div = document.createElement("div");

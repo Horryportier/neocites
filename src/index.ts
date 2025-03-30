@@ -15,7 +15,7 @@ function main() {
 	fetchJSONData(generate_watch_list)
 }
 
-function generate_watch_list(data: WatchList): HTMLElement {
+function generate_watch_list(data: WatchList) {
 	const outter_div = document.createElement("div")
 	const div = document.createElement("div")
 	div.className = "watch_list"
@@ -27,8 +27,7 @@ function generate_watch_list(data: WatchList): HTMLElement {
 	for (const item of items) {
 		div.append(generate_watch_item(item))
 	}
-	return outter_div
-
+	app?.append(outter_div)
 }
 
 function generate_watch_item(item: WatchItem): HTMLElement {
