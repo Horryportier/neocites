@@ -34,7 +34,7 @@ function generate_watch_item(item) {
     return div;
 }
 function fetchJSONData(fn) {
-    fetch('./watch_list.json')
+    fetch('https://raw.githubusercontent.com/Horryportier/neocites/refs/heads/main/watch_list.json')
         .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
