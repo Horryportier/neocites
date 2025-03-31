@@ -9,7 +9,12 @@ function generate_watch_list(data) {
     div.className = "watch_list";
     const title = document.createElement("h1");
     title.textContent = "Currently Watching";
+    const legend = document.createElement("div");
     outter_div.append(title);
+    legend.className = "watch_list_legend";
+    legend.append(createImgElement("assets/jp_icon.png"));
+    legend.append(createTextElement("- watching in Japanese"));
+    outter_div.append(legend);
     outter_div.append(div);
     const items = data.items;
     for (const item of items) {
@@ -29,18 +34,27 @@ function generate_watch_item(item) {
     const img_text_div = document.createElement("div");
     img_text_div.className = "watch_item_img_text_div";
     a.append(title);
+    div.append(a);
+    const info = document.createElement("div");
+    info.className = "watch_item_info";
     const rating = document.createElement("p");
     rating.className = "watch_item_rating";
     rating.textContent = "Rating: " + item.rating.toString() + "/10";
-    a.append(rating);
+    info.append(rating);
+    if (item.is_jp_immersion == true) {
+        const jp_icon = document.createElement("img");
+        jp_icon.src = "assets/jp_icon.png";
+        jp_icon.alt = "jp immersion";
+        info.append(jp_icon);
+    }
+    div.append(info);
     const img = document.createElement("img");
     img.src = item.poster_url;
     img_text_div.append(img);
     const toughts = document.createElement("p");
     toughts.textContent = item.toughts;
     img_text_div.append(toughts);
-    a.append(img_text_div);
-    div.append(a);
+    div.append(img_text_div);
     return div;
 }
 function fetchJSONData(fn) {
@@ -69,5 +83,15 @@ function fetchJSONData(fn) {
     })
         .then(data => fn(data))
         .catch(error => error_f(error));
+}
+function createImgElement(path) {
+    const e = document.createElement("img");
+    e.src = path;
+    return e;
+}
+function createTextElement(text) {
+    const e = document.createElement("p");
+    e.textContent = text;
+    return e;
 }
 main();
