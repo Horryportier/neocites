@@ -31,7 +31,7 @@ function generate_watch_list(data: WatchList) {
 	legend.append(createTextElement("- watching in Japanese"))
 	outter_div.append(legend)
 	outter_div.append(div)
-	const items = data.items
+	const items = data.items.sort(() => Math.random() - 0.5)
 	for (const item of items) {
 		div.append(generate_watch_item(item))
 	}
