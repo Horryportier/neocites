@@ -1,156 +1,135 @@
-
 /* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 
 :root {
---resurrect-1: #2e222f;
---resurrect-2: #3e3546;
---resurrect-3: #625565;
---resurrect-4: #966c6c;
---resurrect-5: #ab947a;
---resurrect-6: #694f62;
---resurrect-7: #7f708a;
---resurrect-8: #9babb2;
---resurrect-9: #c7dcd0;
---resurrect-10: #ffffff;
---resurrect-11: #6e2727;
---resurrect-12: #b33831;
---resurrect-13: #ea4f36;
---resurrect-14: #f57d4a;
---resurrect-15: #ae2334;
---resurrect-16: #e83b3b;
---resurrect-17: #fb6b1d;
---resurrect-18: #f79617;
---resurrect-19: #f9c22b;
---resurrect-20: #7a3045;
---resurrect-21: #9e4539;
---resurrect-22: #cd683d;
---resurrect-23: #e6904e;
---resurrect-24: #fbb954;
---resurrect-25: #4c3e24;
---resurrect-26: #676633;
---resurrect-27: #a2a947;
---resurrect-28: #d5e04b;
---resurrect-29: #fbff86;
---resurrect-30: #165a4c;
---resurrect-31: #239063;
---resurrect-32: #1ebc73;
---resurrect-33: #91db69;
---resurrect-34: #cddf6c;
---resurrect-35: #313638;
---resurrect-36: #374e4a;
---resurrect-37: #547e64;
---resurrect-38: #92a984;
---resurrect-39: #b2ba90;
---resurrect-40: #0b5e65;
---resurrect-41: #0b8a8f;
---resurrect-42: #0eaf9b;
---resurrect-43: #30e1b9;
---resurrect-44: #8ff8e2;
---resurrect-45: #323353;
---resurrect-46: #484a77;
---resurrect-47: #4d65b4;
---resurrect-48: #4d9be6;
---resurrect-49: #8fd3ff;
---resurrect-50: #45293f;
---resurrect-51: #6b3e75;
---resurrect-52: #905ea9;
---resurrect-53: #a884f3;
---resurrect-54: #eaaded;
---resurrect-55: #753c54;
---resurrect-56: #a24b6f;
---resurrect-57: #cf657f;
---resurrect-58: #ed8099;
---resurrect-59: #831c5d;
---resurrect-60: #c32454;
---resurrect-61: #f04f78;
---resurrect-62: #f68181;
---resurrect-63: #fca790;
---resurrect-64: #fdcbb0;
-
---bottom-div-border: 1em;
+    --slicko-1: #8F43C6;
+    --slicko-2: #DF4FCD;
+    --slicko-3: #ED9F2A;
+    --slicko-4: #E8EA60;
+    --slicko-5: #4AE3BF;
+    --slicko-6: #5D51D7;
+    --slicko-7: #F6FBD9;
+    --slicko-8: #1E1A20;
+    --bottom-div-border: 1em;
 }
-   
+
 @font-face {
-  font-family: 'Monogram';
-  src: url('monogram.ttf');
+    font-family: 'Monogram';
+    src: url('monogram.ttf');
 }
 
 html {
-  height: 100%;
+    height: 100%;
+}
+
+a,
+u {
+    text-decoration: none;
 }
 
 body {
-  background-color: var(--resurrect-1);
-  color: var(--resurrect-7);
-  font-family: 'Monogram';
-  padding: 0;
-  margin: 0;
-  min-height: 100%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
+    background-color: var(--slicko-7);
+    color: var(--slicko-1);
+    font-family: 'Monogram';
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
-    color: var(--resurrect-42);
+    color: var(--slicko-5);
 }
 
-a:visited { 
-    color: var(--resurrect-43);
+a:visited {
+    color: var(--slicko-6);
 }
 
 .main {
-    background-color: var(--resurrect-9);
+    background-color: var(--slicko-8);
     padding-left: 2em;
     padding-right: 2em;
     display: grid;
     justify-content: center;
     align-items: center;
-    border-bottom: var(--bottom-div-border) solid var(--resurrect-8);
+    border-bottom: var(--bottom-div-border) solid var(--slicko-1);
 }
 
 .games {
-    background-color: var(--resurrect-9);
+    background-color: var(--slicko-8);
     padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 1em;
     display: grid;
     justify-content: center;
     align-items: center;
-    border-bottom: var(--bottom-div-border) solid var(--resurrect-8);
+    border-bottom: var(--bottom-div-border) solid var(--slicko-1);
 }
+
 .games-home {
     justify-content: left;
     align-items: center;
     display: flex;
 }
-.games-home h2, p {
+
+.games-home h2,
+p {
     margin-left: 0.5em;
 }
+
 .games-home p {
-    color: var(--resurrect-42);
+    color: var(--slicko-7);
 }
 
 
 .watch_list {
-    background-color: var(--resurrect-7);
+    background-color: var(--slicko-1);
+    color: var(--slicko-7);
+    max-width: 90%;
     padding: 10px;
     display: flex;
-    border: 2px solid var(--resurrect-1);
+    border: 2px solid var(--slicko-5);
     border-radius: 5px;
-    vertical-align: center;
+    overflow: auto;
+}
+
+.watch_item_title {
+    color: var(--slicko-3);
+}
+
+.socials {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    a {
+        display: table-cell;
+        text-align: center;
+    }
 }
 
 .watch_item {
+
     flex: 1;
     font-size: 8px;
     width: 160px;
     word-wrap: break-word;
-    
+
+    img {
+        width: 100px;
+        height: 150px;
+    }
+
 
     padding: 5px;
 }
 
-
+.watch_item_img_text_div {
+    display: flex;
+    flex: 1;
+    font-size: 16px;
+    color: var(--slicko-7);
+}

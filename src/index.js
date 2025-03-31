@@ -40,6 +40,22 @@ function generate_watch_item(item) {
     return div;
 }
 function fetchJSONData(fn) {
+    const featch_backup = () => {
+        console.log("retriving from local");
+        fetch('https://raw.githubusercontent.com/Horryportier/neocites/refs/heads/main/watch_list.json')
+            .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+            .then(data => fn(data))
+            .catch(error => console.error('Failed to fetch data:', error));
+    };
+    const error_f = (error) => {
+        console.error('Failed to fetch data:', error);
+        featch_backup();
+    };
     fetch('https://horry-portier.neocities.org/watch_list.json')
         .then(response => {
         if (!response.ok) {
@@ -48,6 +64,6 @@ function fetchJSONData(fn) {
         return response.json();
     })
         .then(data => fn(data))
-        .catch(error => console.error('Failed to fetch data:', error));
+        .catch(error => error_f(error));
 }
 main();

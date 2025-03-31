@@ -6,6 +6,7 @@ interface WatchList {
 
 interface WatchItem {
 	title: string,
+	rating: number
 	poster_url: string,
 	my_anime_list_link: string
 	toughts: string
@@ -55,6 +56,21 @@ function generate_watch_item(item: WatchItem): HTMLElement {
 }
 
 function fetchJSONData(fn: Function) {
+	const featch_backup = () => {
+		console.log("retriving from local")
+		fetch('https://raw.githubusercontent.com/Horryportier/neocites/refs/heads/main/watch_list.json')
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(`HTTP error! Status: ${response.status}`);
+				}
+				return response.json();
+			})
+			.then(data => fn(data))
+			.catch(error => console.error('Failed to fetch data:', error))
+	}
+	const error_f = (error: any) => {
+		console.error('Failed to fetch data:', error); featch_backup()
+	}
 	fetch('https://horry-portier.neocities.org/watch_list.json')
 		.then(response => {
 			if (!response.ok) {
@@ -63,6 +79,7 @@ function fetchJSONData(fn: Function) {
 			return response.json();
 		})
 		.then(data => fn(data))
-		.catch(error => console.error('Failed to fetch data:', error));
+		.catch(error => error_f(error));
+
 }
 main()
