@@ -26,15 +26,21 @@ function generate_watch_item(item) {
     const title = document.createElement("h2");
     title.textContent = item.title;
     title.className = "watch_item_title";
+    const img_text_div = document.createElement("div");
+    img_text_div.className = "watch_item_img_text_div";
     a.append(title);
     const img = document.createElement("img");
     img.src = item.poster_url;
-    a.append(img);
+    img_text_div.append(img);
+    const toughts = document.createElement("p");
+    toughts.textContent = item.toughts;
+    img_text_div.append(toughts);
+    a.append(img_text_div);
     div.append(a);
     return div;
 }
 function fetchJSONData(fn) {
-    fetch('https://raw.githubusercontent.com/Horryportier/neocites/refs/heads/main/watch_list.json')
+    fetch('https://horry-portier.neocities.org/watch_list.json')
         .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);

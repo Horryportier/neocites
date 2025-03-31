@@ -148,10 +148,9 @@ a:visited {
     font-size: 8px;
     width: 160px;
     word-wrap: break-word;
-    img{
-    max-width:300px;
-    max-height :200px;
-    }
+    
 
     padding: 5px;
 }
+
+
