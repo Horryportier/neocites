@@ -59,6 +59,22 @@ a:visited {
     border-bottom: var(--bottom-div-border) solid var(--slicko-1);
 }
 
+.header {
+    display: flex;
+    vertical-align: center;
+    padding-top: 1em;
+
+    img {
+        padding: 4px;
+        border: 2px solid var(--slicko-6);
+        border-radius: 4px;
+        background-color: var(--slicko-7);
+        width: 64px;
+        height: 64px;
+        margin-right: 2em;
+    }
+}
+
 .games {
     background-color: var(--slicko-8);
     padding-left: 2em;
@@ -74,6 +90,11 @@ a:visited {
     justify-content: left;
     align-items: center;
     display: flex;
+}
+
+.games_link {
+    display: flex;
+    font-size: 32px;
 }
 
 .games-home h2,
