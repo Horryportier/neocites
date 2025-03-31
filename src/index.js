@@ -29,6 +29,10 @@ function generate_watch_item(item) {
     const img_text_div = document.createElement("div");
     img_text_div.className = "watch_item_img_text_div";
     a.append(title);
+    const rating = document.createElement("p");
+    rating.className = "watch_item_rating";
+    rating.textContent = "Rating: " + item.rating.toString() + "/10";
+    a.append(rating);
     const img = document.createElement("img");
     img.src = item.poster_url;
     img_text_div.append(img);
