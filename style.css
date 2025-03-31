@@ -1,6 +1,4 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+/* CSS Fixes and Improvements */
 
 :root {
     --slicko-1: #8F43C6;
@@ -19,29 +17,26 @@
     src: url('monogram.ttf');
 }
 
-html {
+html,
+body {
     height: 100%;
-}
-
-a,
-u {
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Monogram', sans-serif;
 }
 
 body {
     background-color: var(--slicko-7);
     color: var(--slicko-1);
-    font-family: 'Monogram';
-    padding: 0;
-    margin: 0;
-    min-height: 100%;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 a {
     color: var(--slicko-5);
+    text-decoration: none;
 }
 
 a:visited {
@@ -49,56 +44,52 @@ a:visited {
 }
 
 .main {
+    width: 80%;
     background-color: var(--slicko-8);
-    width: 100%;
-    padding-left: 2em;
-    padding-right: 2em;
-    display: grid;
-    justify-content: center;
+    padding: 2em 2em 1em;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     border-bottom: var(--bottom-div-border) solid var(--slicko-1);
 }
 
 .header {
     display: flex;
-    vertical-align: center;
     padding-top: 1em;
+}
 
-    img {
-        padding: 4px;
-        border: 2px solid var(--slicko-6);
-        border-radius: 4px;
-        background-color: var(--slicko-7);
-        width: 64px;
-        height: 64px;
-        margin-right: 2em;
-    }
+.header img {
+    padding: 4px;
+    border: 2px solid var(--slicko-6);
+    border-radius: 4px;
+    background-color: var(--slicko-7);
+    width: 64px;
+    height: 64px;
+    margin-right: 2em;
 }
 
 .games {
     background-color: var(--slicko-8);
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 1em;
-    display: grid;
-    justify-content: center;
+    padding: 2em 2em 1em;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     border-bottom: var(--bottom-div-border) solid var(--slicko-1);
 }
 
 .games-home {
-    justify-content: left;
-    align-items: center;
     display: flex;
+    align-items: center;
 }
 
 .games_link {
     display: flex;
     font-size: 32px;
+    align-content: flex-end;
 }
 
 .games-home h2,
-p {
+.games-home p {
     margin-left: 0.5em;
 }
 
@@ -106,21 +97,34 @@ p {
     color: var(--slicko-7);
 }
 
-
 .watch_list {
     background-color: var(--slicko-1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     color: var(--slicko-7);
     max-width: 90%;
     padding: 10px;
-    display: flex;
     border: 2px solid var(--slicko-5);
     border-radius: 5px;
     overflow: auto;
 }
 
+.watch_item {
+    flex: 1;
+    font-size: 8px;
+    max-width: 320px;
+    word-wrap: break-word;
+    padding: 5px;
+}
+
+.watch_item img {
+    width: 100px;
+    height: 150px;
+}
 
 .watch_item_rating {
     font-size: 16px;
+    font-weight: bold;
     color: var(--slicko-4);
     height: 20px;
 }
@@ -129,34 +133,19 @@ p {
     color: var(--slicko-3);
     height: 32px;
     overflow: auto;
-    align-content: bottom;
+    display: flex;
+    align-items: flex-end;
 }
 
 .socials {
     display: table;
     width: 100%;
     table-layout: fixed;
-
-    a {
-        display: table-cell;
-        text-align: center;
-    }
 }
 
-.watch_item {
-
-    flex: 1;
-    font-size: 8px;
-    max-width: 320;
-    word-wrap: break-word;
-
-    img {
-        width: 100px;
-        height: 150px;
-    }
-
-
-    padding: 5px;
+.socials a {
+    display: table-cell;
+    text-align: center;
 }
 
 .watch_item_img_text_div {
@@ -164,4 +153,19 @@ p {
     flex: 1;
     font-size: 16px;
     color: var(--slicko-7);
+
+}
+
+.watch_item_img_text_div img {
+    margin-right: 10px;
+    border: 2px solid var(--slicko-8);
+    border-bottom: var(--bottom-div-border) solid var(--slicko-8);
+}
+
+.watch_item_img_text_div p {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--slicko-8);
+    border-bottom: var(--bottom-div-border) solid var(--slicko-6);
+    overflow-y: auto;
 }
