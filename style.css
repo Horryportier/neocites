@@ -1,5 +1,71 @@
 /* CSS Fixes and Improvements */
 
+:root {
+	--ekko-1: #FFFFFA;
+	--ekko-2: #E5E3E3;
+	--ekko-3: #BAB2B6;
+	--ekko-4: #948690;
+	--ekko-5: #6B606E;
+	--ekko-6: #504254;
+	--ekko-7: #322B3B;
+	--ekko-8: #1E1B27;
+	--ekko-9: #D0D0F0;
+	--ekko-10: #4F4540;
+	--ekko-11: #695E57;
+	--ekko-12: #9A8D7A;
+	--ekko-13: #D5C9AB;
+	--ekko-14: #FBF2D0;
+	--ekko-15: #B5AE91;
+	--ekko-16: #83816C;
+	--ekko-17: #5A5C58;
+	--ekko-18: #383849;
+	--ekko-19: #94A285;
+	--ekko-20: #738369;
+	--ekko-21: #546851;
+	--ekko-22: #374C46;
+	--ekko-23: #2A3941;
+	--ekko-24: #242832;
+	--ekko-25: #C0D9D9;
+	--ekko-26: #789AAC;
+	--ekko-27: #567183;
+	--ekko-28: #3E515E;
+	--ekko-29: #F5DB93;
+	--ekko-30: #D9B56F;
+	--ekko-31: #BB9256;
+	--ekko-32: #9C7444;
+	--ekko-33: #795636;
+	--ekko-34: #553B2C;
+	--ekko-35: #362A29;
+	--ekko-36: #262026;
+	--ekko-37: #38222D;
+	--ekko-38: #542434;
+	--ekko-39: #752B39;
+	--ekko-40: #96413D;
+	--ekko-41: #B56246;
+	--ekko-42: #D88E4F;
+	--ekko-43: #EFC15F;
+	--ekko-44: #C2B752;
+	--ekko-45: #A0A34B;
+	--ekko-46: #7E8940;
+	--ekko-47: #5E7745;
+	--ekko-48: #3D654D;
+	--ekko-49: #517F4E;
+	--ekko-50: #719D50;
+	--ekko-51: #97BD56;
+	--ekko-52: #2D416E;
+	--ekko-53: #3B6992;
+	--ekko-54: #518DA3;
+	--ekko-55: #83C5CF;
+	--ekko-56: #BEFBFB;
+	--ekko-57: #242849;
+	--ekko-58: #372B54;
+	--ekko-59: #4D3454;
+	--ekko-60: #67455F;
+	--ekko-61: #866170;
+	--ekko-62: #AD827F;
+	--ekko-63: #E7B19E;
+	--ekko-64: #F2D3B5;
+}
 
 
 @font-face {
@@ -7,10 +73,30 @@
 	src: url('monogram.ttf');
 }
 
-html,
 body {
+	width: 100%;
 	height: 100%;
+
 	margin: 0;
 	padding: 0;
+
 	font-family: 'Monogram', sans-serif;
+	background-color: var(--ekko-18);
+}
+
+.main {
+	align-self: center;
+}
+
+.blog-posts-links {
+	a:link {
+		color: var(--ekko-54);
+	}
+
+	a:visited {
+		color: var(--ekko-53);
+	}
+
+	float: left;
+	font-size: 32px;
 }
