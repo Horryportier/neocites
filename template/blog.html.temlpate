@@ -5,13 +5,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The web site of horry-portier</title>
-	<link href="../../style.css" rel="stylesheet" type="text/css" media="all">
+	<link href="../../post_style.css" rel="stylesheet" type="text/css" media="all">
 
 </head>
 
 <body>
 	<div class="blog-header">
-		<a href="../../index.html">Home</a>
+		<a href="../../index.html" class="home-link">Home</a>
 		$POST_HEADER$
 	</div>
 	<div class="main">

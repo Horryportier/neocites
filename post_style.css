@@ -82,42 +82,56 @@ body {
 
 	font-family: 'Monogram', sans-serif;
 	background-color: var(--ekko-36);
+	color: var(--ekko-1);
+	font-size: 24px;
 }
 
 .main {
-	align-content: center;
+	align-self: center;
+	text-wrap: balance;
 	padding-left: 2em;
+
+	code {
+		font-size: 16px;
+		background-color: var(--ekko-38)
+	}
 }
 
-.blog-posts-links {
+
+
+.blog-header {
+	padding-left: 2em;
+	font-size: 32px;
+
 	a:link {
-		color: var(--ekko-59);
+		color: var(--ekko-50);
 	}
 
 	a:visited {
-		color: var(--ekko-60);
+		color: var(--ekko-51);
+	}
+
+	.home-link:visited {
+		color: var(--ekko-40);
+	}
+
+	.home-link:link {
+		color: var(--ekko-39);
+	}
+}
+
+
+
+
+
+.blog-posts-links {
+	a:link {
+		color: var(--ekko-54);
+	}
+
+	a:visited {
+		color: var(--ekko-53);
 	}
 
 	font-size: 32px;
-}
-
-.row {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0 4px;
-}
-
-/* Create two equal columns that sits next to each other */
-.column {
-	flex: auto;
-	padding: 0 4px;
-}
-
-.column img {
-	margin-top: 8px;
-	display: block;
-	max-width: 640px;
-	max-height: 360px;
-	width: auto;
-	height: auto;
 }
